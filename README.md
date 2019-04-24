@@ -1,4 +1,4 @@
-# Курс тест по Java
+# Java Test Course
 
 Course purpose
 ----------
