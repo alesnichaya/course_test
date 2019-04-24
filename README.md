@@ -1,140 +1,140 @@
 # Курс тест по Java
 
-Цель курса
+Course purpose
 ----------
 
-Проверить логические и алгоритмические способности ученика заниматься профессиональным программированием. 
-Кандидаты полностью выполнившие все задания могут смело продолжать изучать программирование, 
-т.к. у них есть хороший потенциал стать высококвалифицированными разработчиками ПО.
-Кандидатам, которые испытывают сложности в выполнении данных задач, следует обратить внимание 
-на смежные области разработки ПО, такие как: QA Automation, аналитик, функциональный программист, support.
+Check the logical and algorithmic abilities of the student to engage in professional programming.
+Candidates who have completed all the tasks can safely continue to learn programming,
+because they have a good potential to become highly skilled software developers.
+Candidates who have difficulty performing these tasks should pay attention
+to related areas of software development, such as: QA Automation, analyst, functional programmer, support.
 
-Описание
+Description
 --------
 
-В курсе собраны 20 задач возрастающей сложности. Каждая задача состоит из подготовленного каркаса классов и 
-полностью написанных автоматических тестов. То есть все задания будут автоматически проверены.
-В данном курсе используется подход TDD. Инструменты необходимые для прохождения курса: Maven, Git, Java 8.
+The course contains 20 tasks of increasing complexity. Each task consists of a prepared class framework and
+fully written automatic tests. That is, all tasks will be automatically checked.
+This course uses the TDD approach. Tools required to complete the course: Maven, Git, Java 8.
 
-Для получения исходного кода нужно выполнит команду 
+To get the source code you need to run the command
 
 *git clone git@github.com:peterarsentev/course_test.git*
 
-Проект собрать через maven. Задания курса находятся в отдельных пакетах 
+Project to collect through maven. Course assignments are in separate packages.
 
 */src/main/java/ru/parsentev/task_XXX/package-info.java*
 
-а так же продублированы ниже.
+as well as duplicated below.
 
-Ученик должен ознакомиться c заданием и перейти к реализации недостающего кода и классов. 
-После завершения реализации ученик должен зайти в папку 
+The student should familiarize himself with the task and proceed to the implementation of the missing code and classes.
+After completion of the implementation, the student should go to the folder
 
 */src/test/java/ru/parsentev/task_XXX/*
 
-и в каждом классе убрать аннотацию 
+and remove annotation in each class
 
-*@Ignore* - это аннотация используется для игнорирования тестов.
+*@Ignore* - This annotation is used to ignore tests.
 
-после этого ученик должен перейти в корень проекта и выполнить команду
+after that the student must go to the root of the project and execute the command
 
 *mvn clean test*
 
-Система сборки должна успешно пройти все тесты. Если тесты упали, необходимо поправить ваш код.
-Код тестов править нельзя. 
+The build system must pass all tests successfully. If tests have fallen, you need to fix your code.
+Test code cannot be edited.
 
-В репозитории есть две ветки
+There are two branches in the repository.
 
-- master - каркас заданий с тестами.
-- solution - полностью выполненные задания с тестами.
+- master - skeleton assignments with tests.
+- solution - fully completed tasks with tests.
 
-Смотреть решения рекомендуется после успешной реализации кода и успешно пройденных тестов.
+Watch the solution is recommended after the successful implementation of the code and successfully passed tests.
 
-В качестве теоретического материала для подготовки к курсу следует прочитать следующие книги:
+As a theoretical material to prepare for the course should read the following books:
 
 *Head First Java, 2nd Edition: Kathy Sierra, Bert Bates*
 
-*Алгоритмы. Руководство по разработке, Стивен С. Скиена*
+*Algorithms. Design Guide, Stephen S. Skien*
 
-Темы необходимые для прохождения курса.
+Topics required to complete the course.
 
-- Типы данных
-- Арифметические операции
-- Операторы условия
-- Циклы
-- Массивы
-- Наследование
-- Полиморфизм
-- Инкапсуляция
-- Исключения
+- Data types
+- Arithmetic operations
+- Condition Operators
+- Cycles
+- Arrays
+- Inheritance
+- Polymorphism
+- Encapsulation
+- Exceptions
 
-Задания
+Tasks
 -------
 
-1. Реализовать программу калькулятор. Калькулятор должен выполнять операции:
-   сложение, вычитание, умножение, деление, возведение в степень.
-   При выполнении деления ввести проверку на 0.
-   Если второй аргумент 0 нужно выкинуть исключение java.lang.IllegalStateException
-   
-2. Реализовать класс точку, описывающую точку в системе координат x, y - Point(x, y).
-   объект точка должен иметь методы double Point#distanceTo(Point point) - метод должен вычислять расстояние
-   между двумя точками.
+1.Implement a program calculator. The calculator must perform the following operations:
+   addition, subtraction, multiplication, division, exponentiation.
+   When performing a division, enter a check to 0.
+   If the second argument 0 needs to throw a java.lang.IllegalStateException exception
+   
+2. Implement a class point describing a point in the x, y coordinate system - Point (x, y).
+   the object point must have methods double Point # distanceTo (Point point) - the method must calculate the distance
+   between two points.
 
-3. Реализовать класс треугольник. Треугольник должен описываться через точки в системе координат.
-   Объект треугольник должен иметь методы:
-   boolean exists() - проверяет существует ли треугольник или нет.
-   double area() - вычисляет площадь треугольника. 
-   Если треугольник не существует выбросить исключение java.lang.IllegalStateException
-   
-4. Реализовать класс равнобедренный треугольник наследуя класс треугольник из задания 3.
-   Дополнить поведение метода boolean exists() - true, если треугольник равнобедренный.
-   Остальное поведение оставить прежним.
+3. Implement a class triangle. The triangle should be described through points in the coordinate system.
+   The triangle object must have methods:
+   boolean exists () - checks whether a triangle exists or not.
+   double area () - calculates the area of ​​a triangle.
+   If the triangle does not exist, throw a java.lang.IllegalStateException exception.
+   
+4. Implement the class isosceles triangle inheriting the class triangle from the task 3.
+   Supplement the behavior of the boolean exists () method - true if the triangle is isosceles.
+   Remaining behavior to remain the same.
 
-5. Реализовать класс прямоугольный треугольник наследуя класс треугольник из задания 3.
-   Дополнить поведение метода boolean exists() - true, если треугольник равносторонний. 
-   Остальное поведение оставить прежним.
+5. Implement the class of a right triangle by inheriting the class of a triangle from task 3.
+   Supplement the behavior of the boolean exists () method - true if the triangle is equilateral.
+   Remaining behavior to remain the same.
 
-6. Реализовать класс квадрат основанный на четырех точках Point(x, y).
-   boolean exists() - проверяет существует ли квадрат или нет.
+6. Implement the class square based on the four points Point (x, y).
+   boolean exists () - checks whether the square exists or not.
 
-7. Реализовать класс Expression. Класс должен принимать строку из просто математического выражения
-   и методы double calc(). Должен поддерживать операции + - / * exp.
-   Например, "2+2" - 4, "2-2" - 0
-   Если выражение не корректное выбросить исключение java.lang.IllegalStateException
+7. Implement the Expression class. The class must accept a string from a simple mathematical expression.
+   and methods double calc (). Must support + - / * exp operations.
+   For example, "2 + 2" - 4, "2-2" - 0
+   If the expression is not correct, throw a java.lang.IllegalStateException exception.
 
-8. Реализовать класс вычисляющий простые числа до N.
+8. Implement a class that computes prime numbers up to N.
 
-9. Реализовать метод подсчета уникальных символов в строке.
+9. Implement the method of counting unique characters in a string.
 
-10. Реализовать методы проверки корректности открытых и закрытых скобок.
-    Например, ()(()((()))) - true, ()) - false
- 
-11. Задан массив чисел со значениями 0 и 1. Нужно проверить, что все значения в массиве равны 1.
-    Например, [0, 1] - false, [1, 1] - true, 
+10. Implement the validation methods for open and closed brackets.
+    For example, () (() ((()))) - true, ()) - false
+ 
+11. An array of numbers is given with values ​​of 0 and 1. It is necessary to check that all values ​​in the array are equal to 1.
+    For example, [0, 1] - false, [1, 1] - true,
 
-12. Задан массив чисел со значениями 0 и 1. 
-    Нужно проверить, что в массиве есть последовательности из трех и больше единиц.
-    Например, [0, 1, 1] - false, [1, 1, 1] - true,
+12. An array of numbers is specified with the values ​​0 and 1.
+    It is necessary to check that the array has a sequence of three or more units.
+    For example, [0, 1, 1] is false, [1, 1, 1] is true,
 
-13. Задан числовой массив. Нужно проверить, что все значения в массиве одинаковые.
-    Например, [0, 0, 0] - true, [1, 1, 1] - true, [0, 1, 1] - false,
+13. A numeric array is specified. We need to check that all the values ​​in the array are the same.
+    For example, [0, 0, 0] is true, [1, 1, 1] is true, [0, 1, 1] is false,
 
-14. Задано предложение. Нужно переставить слова в обратно порядке.
-    Например, "программируй и зарабатывай" -> "зарабатывай и программируй"
+14. The proposal is given. Need to rearrange the words in the reverse order.
+    For example, "program and earn" -> "earn and program"
 
-15. Задан числовой массив. Нужно реализовать метод кольцевого сдвига на N. int[] shift(). 
-    Не использовать дополнительный массив.
-    Например, [1, 2, 3, 4, 5] - shift(2) - [4, 5, 1, 2, 3]
+15. A numeric array is specified. You need to implement a ring-shift method on N. int [] shift ().
+    Do not use additional array.
+    For example, [1, 2, 3, 4, 5] - shift (2) - [4, 5, 1, 2, 3]
 
-16. Задан квадратный массив. Нужно проверить, что в нем есть выигрышные варианты для игры крестики-нолики.
+16. Set a square array. You need to check that it has winning options for playing tic-tac-toe.
 
-17. Реализован банкомат размена денег. Автомат принимает бумажную купюру и обменивает на монеты. 
-    Метод должен возвращать список всех возможных вариантов размены купюры.
+17. Implemented ATM money exchange. The machine accepts a paper bill and exchanges for coins.
+    The method should return a list of all possible options for exchanging bills.
 
-18. Задан двойной массив, заполненный нулями и единицами. Нужно определить самое большое множество единиц. 
-    Множеством считается объединение единиц, которые соприкасаются друг с другом. 
-    Диагональное соприкосновение не учитывать.
+18. A double array filled with zeros and ones is set. It is necessary to determine the largest set of units.
+    Considered to be a combination of units that are in contact with each other.
+    Diagonal contact is not considered.
 
-19. Задан двойной массив из единиц и нулей. Нужно найти минимальный путь от точки А до точки В. 
-    Двигаться можно только по единицам и только по вертикали или горизонтали. 
+19. A double array of ones and zeros is set. We need to find the minimum path from point A to point B.
+    You can only move on units and only vertically or horizontally.
 
-20. Задан одномерный массив. Нужно найти все возможные варианты перестановок этого массива.
+20. Set one-dimensional array. It is necessary to find all possible variants of permutations of this array.
